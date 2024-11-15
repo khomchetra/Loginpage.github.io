@@ -222,6 +222,7 @@ input.form-control {
     transform: none;
     border-radius: 10px;
     height: auto;
+    padding: 40px 2px;
   }
   .input-group {
     display: flex;
