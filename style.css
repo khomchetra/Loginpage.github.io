@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+
+  height: 500px;
+  /* background: linear-gradient(60deg, #ffffff, #2f0053); */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.left-side {
+  background-color: #1b3451;
+  color: #fff;
+  width: 53%;
+  padding: 40px;
+  display: flex;
+  position: relative;
+  left: 9px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.logo img {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 300px;
+}
+
+.logo h1 {
+  margin: 20px 0 0;
+  font-size: 24px;
+}
+
+.illustration img {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.illustration .logopicture {
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.illustration .logopicture:hover {
+  /* transform: scale(1.2);      */
+  /* transform: translate(-50px , -100px); */
+  /* transform:  skew(20deg, 10deg); */
+  transform: rotate(15deg);
+}
+
+.right-side {
+  width: 54%;
+  height: 459px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-color: #fff;
+  padding: 40px;
+  position: absolute;
+  right: 0;
+  top: 51%;
+  left: 24rem;
+  transform: translateY(-50%);
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  z-index: 10;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #003366;
+}
+
+.input-group {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 2px;
+}
+input.form-control {
+  height: 50px;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.input-group input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.input-group img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* .input-group input {
+    border-radius: 0px 10px;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .input-group:focus-within {
+    border-color: #000099;
+  } */
+
+.show-password img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #003366;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #002244;
+}
+
+/* Flexbox to center inner container */
+/* .bg-light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  } */
+#Gmail {
+  background-color: white; /* Set the desired background color */
+}
+
+#Gmail:focus {
+  background-color: white !important; /* Ensure focus color remains white */
+  outline: none;
+}
+
+/* Pseudo-element workaround to mask autocomplete background */
+#Gmail:-webkit-autofill,
+#Gmail:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important; /* Overlay white color */
+  box-shadow: 0 0 0px 1000px white inset !important; /* Apply for other browsers */
+}
+
+.image {
+  display: none;
+}
+.image-form {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 250px;
+  height: 150px;
+}
+
+/* Media Query for screens with max width of 700px */
+@media screen and (max-width: 550px) {
+  .image {
+    display: block;
+  }
+
+  .container {
+    width: 100%;
+    /* background: linear-gradient(60deg, #ffffff, #2f0053); */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .login-form {
+    width: 100%;
+  }
+
+  .login-form h2 {
+    font-size: 14px;
+    color: #003366;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    background-color: #1b3451;
+    width: 100%;
+    position: static;
+    top: auto;
+    transform: none;
+    border-radius: 10px;
+    height: auto;
+  }
+  .input-group {
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+  }
+  .input-group input {
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 10px;
+  }
+
+  .login-form {
+    position: relative;
+    top: 50px;
+    padding: 3px;
+    margin: 3px;
+  }
+}
