@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>khomchetrawwww.com</title>
     <link rel="stylesheet" href="BootStrap_Document/css/bootstrap.css" />
+  
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
+    
+
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <div class="pt-2 ps-3 pe-3 container pb-2 mb-3 mt-3">
       <div class="left-side">
@@ -40,35 +42,41 @@
         </div>
         <form class="login-form p-4" id="form_login">
           <h2>Login</h2>
-
+        
+          <!-- Gmail Field -->
           <div class="input-group">
-            <span class="ps-4 pe-3 text-dark"
-              ><i class="fa-regular fa-envelope"><span class="ps-3"> <i class="fa-solid fa-grip-lines-vertical"></i></span></i
-            ></span>
-            <label for="username-email"></label>
+            <span class="ps-4 pe-3 text-dark">
+              <i class="fa-regular fa-envelope"></i>
+              <span class="ps-3">
+                <i class="fa-solid fa-grip-lines-vertical"></i>
+              </span>
+            </span>
             <input
               class="form-control col-md-12 precent-focus"
               id="Gmail"
               type="text"
               placeholder="Input your Username or Email"
-             
             />
           </div>
           <span id="Gmail-error" class="text-danger Gmail-error mb-3"></span>
+        
+          <!-- Password Field -->
           <div class="input-group">
-            <span class="ps-4 pe-3 text-dark"
-              ><i class="fa-solid fa-key"><span class="ps-3"> <i class="fa-solid fa-grip-lines-vertical"></i></span></i
-            ></span>
-            <label for="password"></label>
+            <span class="ps-4 pe-3 text-dark">
+              <i class="fa-solid fa-key"></i>
+              <span class="ps-3">
+                <i class="fa-solid fa-grip-lines-vertical"></i>
+              </span>
+            </span>
             <input
               class="col-md-12 form-control"
               type="password"
               id="Password"
               placeholder="Input enter your Password"
-              
             />
           </div>
           <span id="Password-error" class="text-danger pt-0 mb-3"></span>
+        
           <button type="submit" class="login-btn">Log in</button>
         </form>
       </div>

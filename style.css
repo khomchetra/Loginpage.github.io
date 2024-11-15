@@ -11,7 +11,7 @@ body {
 .container {
   display: flex;
   max-width: 900px;
-
+ 
   height: 500px;
   /* background: linear-gradient(60deg, #ffffff, #2f0053); */
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -171,7 +171,7 @@ input.form-control {
 
 /* Pseudo-element workaround to mask autocomplete background */
 #Gmail:-webkit-autofill,
-#Gmail:-webkit-autofill:focus {
+#Gmail:-webkit-autofill:focus {   
   -webkit-box-shadow: 0 0 0px 1000px white inset !important; /* Overlay white color */
   box-shadow: 0 0 0px 1000px white inset !important; /* Apply for other browsers */
 }
@@ -246,3 +246,39 @@ input.form-control {
     margin: 3px;
   }
 }
+/* Keyframes for continuous animation */
+  /* Keyframes for continuous animation */
+  /* Keyframes for rotating and pulsing effect */
+  @keyframes iconNewAnimation {
+    0% {
+      transform: rotate(0deg);
+      color: gray;
+    }
+    25% {
+      transform: rotate(10deg);
+      color: #1b3451; /* Light blue */
+    }
+    50% {
+      transform: rotate(-10deg);
+      
+    }
+    75% {
+      transform: rotate(5deg);
+      
+    }
+    100% {
+      transform: rotate(0deg);
+     
+    }
+  }
+
+  /* Apply the animation to email and password icons only */
+  .fa-envelope, .fa-key {
+    animation: iconNewAnimation 2s infinite;
+    transition: transform 0.3s ease-in-out; /* Smooth movement */
+  }
+
+  /* Ensure the grip-lines-vertical icon remains unaffected */
+  .fa-grip-lines-vertical {
+    animation: none !important;
+  }
